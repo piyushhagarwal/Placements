@@ -1,6 +1,6 @@
 // Move all negative numbers to beginning and positive to end with constant extra space
 // Dutch national flag approach
-// More detailed solution: https://www.geeksforgeeks.org/move-negative-numbers-beginning-positive-end-constant-extra-space/
+// More detailed solution with different approaches: https://www.geeksforgeeks.org/move-negative-numbers-beginning-positive-end-constant-extra-space/
 
 #include <iostream>
 using namespace std;
