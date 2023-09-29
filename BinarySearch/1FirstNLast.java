@@ -69,6 +69,9 @@ class FirstNLast {
 
     }
 
+    // One more question could be Find number of occurrences
+    // For that just do maxIndex - minIndex + 1
+
     public static void main(String args[]) {
         int arr[] = { 7, 7, 9, 10, 10 };
         int n = arr.length;
