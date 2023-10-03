@@ -16,6 +16,7 @@
 // Of the 3 cases, Option 3 has the minimum pages = 113.
 
 //Hard level question
+//Same solution for Painters partition and subset of arrays
 
 package BinarySearch;
 
