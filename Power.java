@@ -33,4 +33,9 @@ class Solution {
         // Otherwise, return the calculated result
         return ans;
     }
+
+    // Function to directly calculate the power of a number
+    public double myPow2(double x, int n) {
+        return Math.pow(x, n);
+    }
 }
