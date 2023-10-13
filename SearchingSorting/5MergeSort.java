@@ -37,7 +37,7 @@ class MergeSort {
     }
 
     public static int[] mergeSort(int[] arr, int start, int end) {
-        if (start == end) {
+        if (start >= end) {
             return new int[] { arr[start] };
         }
 
@@ -68,7 +68,7 @@ class MergeSort {
         int k = start;
 
         while (i < arr1.length && j < arr2.length) {
-            if (arr1[i] >= arr2[j]) {
+            if (arr1[i] > arr2[j]) {
                 arr[k] = arr2[j];
                 j++;
             } else {
@@ -93,7 +93,7 @@ class MergeSort {
     }
 
     public static void mergeSort1(int[] arr, int start, int end) {
-        if (start == end) {
+        if (start >= end) {
             return;
         }
         int mid = start + (end - start) / 2;
@@ -108,6 +108,9 @@ class MergeSort {
     // Time complexity = O(nlog(n)) : all cases(worst,best and avg)
     // Space complexity = O(n)
     // This sorting algo is best for sorting large arrays
+    // Solve Number of Inversion after this because its an application of the merge
+    // sort.
+    // It is a stable sorting algorithm
 
     public static void main(String args[]) {
 
