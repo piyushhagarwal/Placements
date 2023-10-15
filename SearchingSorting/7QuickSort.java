@@ -100,5 +100,7 @@ class QuickSort {
             System.out.print(i + " ");
         }
     }
+    // After this solve Kth smallest element problem in the array (3th question in
+    // array section)
 
 }
