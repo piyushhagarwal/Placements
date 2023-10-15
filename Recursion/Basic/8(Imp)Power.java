@@ -1,4 +1,4 @@
-package Recursion;
+package Recursion.Basic;
 
 class Power {
     public static int calculatePower(int base, int power) {

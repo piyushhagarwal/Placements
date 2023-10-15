@@ -1,4 +1,4 @@
-package Recursion;
+package Recursion.Basic;
 
 class IsSorted {
     public static boolean isSorted(int index, int[] arr) {

@@ -1,4 +1,4 @@
-package Recursion;
+package Recursion.Basic;
 
 class Palindrome {
     public static boolean checkPalindrome(String str, int start, int end) {

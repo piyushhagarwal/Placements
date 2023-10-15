@@ -1,4 +1,4 @@
-package Recursion;
+package Recursion.Basic;
 
 class BubbleSort {
     public static void bubbleSort(int arr[], int n) {

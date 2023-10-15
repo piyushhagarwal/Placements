@@ -57,5 +57,7 @@ public class MapCollection {
         int maxValue = Collections.max(values);
         int minValue = Collections.min(values);
 
+        System.out.println("Max Value: " + maxValue);
+        System.out.println("Min Value: " + minValue);
     }
 }

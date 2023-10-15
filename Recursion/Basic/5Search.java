@@ -1,4 +1,4 @@
-package Recursion;
+package Recursion.Basic;
 
 class LinearSearch {
     public static int linearSearch(int index, int arr[], int key) {
