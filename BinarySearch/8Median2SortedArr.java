@@ -16,6 +16,8 @@
 // Link: https://leetcode.com/problems/median-of-two-sorted-arrays/
 // Solution Link: https://www.youtube.com/watch?v=F9c7LpRZWVQ
 
+// Similar question: Given two arrays arr1 and arr2 of size N and M respectively and an element K. The task is to find the element that would be at the kth position of the final sorted array.
+
 package BinarySearch;
 
 class Solution {
