@@ -57,6 +57,14 @@ public class MapCollection {
         int maxValue = Collections.max(values);
         int minValue = Collections.min(values);
 
+        // Increment the value of a particular key
+        hashMap.put("John", hashMap.get("John") + 1);
+
+        // 13. Iterate over HashMap
+        for (String key : hashMap.keySet()) {
+            System.out.println("Key: " + key + " Value: " + hashMap.get(key));
+        }
+
         System.out.println("Max Value: " + maxValue);
         System.out.println("Min Value: " + minValue);
     }
