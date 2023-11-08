@@ -36,7 +36,10 @@ class Solution {
     // Time Complexity : O(1)
     // Space Complexity : O(1)
 
-    // Normal method
+    // Normal method -
+    // This method is also very important because by this we can check if a given
+    // number is a power of any number
+    // by just replacing 2 with that number
     public boolean isPowerOfTwo2(int n) {
         int exponentialNumber = 0;
         double ans = 0;
