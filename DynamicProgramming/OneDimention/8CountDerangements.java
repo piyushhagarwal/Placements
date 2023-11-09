@@ -3,7 +3,7 @@
 // Link: https://www.codingninjas.com/studio/problems/count-derangements_873861?leftPanelTab=0&utm_source=youtube&utm_medium=affiliate&utm_campaign=Lovebabbar&leftPanelTabValue=PROBLEM
 // Solution: https://www.youtube.com/watch?v=NW-BLDQHFXk&list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA&index=117&t=3s
 
-package DynamicProgramming;
+package DynamicProgramming.OneDimention;
 
 class Solution {
     static long recurSolution(int N) {
