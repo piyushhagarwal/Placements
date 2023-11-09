@@ -21,23 +21,29 @@ class DSA {
         System.out.println(s.toString());
     }
 
-    static void intersection(int a[], int b[]) {
+    public int[] intersection(int[] nums1, int[] nums2) {
+
         HashSet<Integer> set1 = new HashSet<>();
+        for (int n1 : nums1) {
+            set1.add(n1);
+        }
         HashSet<Integer> set2 = new HashSet<>();
+        for (int n2 : nums2) {
 
-        for (int num : a) {
-            set1.add(num);
+            if (set1.contains(n2)) {
+                set2.add(n2);
+            }
         }
 
-        for (int num : b) {
-            set2.add(num);
+        // convert set to array
+        int[] result = new int[set2.size()];
+        int i = 0;
+        for (int x : set2) {
+            result[i] = x;
+            i++;
         }
 
-        // By doing this duplicate values will be eliminated ^
-
-        set1.retainAll(set2);
-
-        System.out.println(set1.toString());
+        return result;
     }
 
     public static void main(String[] args) {
@@ -45,6 +51,5 @@ class DSA {
         int b[] = { 2, 4, 5, 6, 8, 9, 4, 6, 5, 4 };
 
         union(a, a.length, b, b.length);
-        intersection(a, b);
     }
 }
