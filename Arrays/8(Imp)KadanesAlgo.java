@@ -18,6 +18,9 @@
 // Output: 23
 // Explanation: The subarray [5,4,-1,7,8] has the largest sum 23.
 
+// Link : https://leetcode.com/problems/maximum-subarray/
+// Solution : https://www.youtube.com/watch?v=w4W6yya1PIc&t=633s
+
 //Kadanes Algo is a solution to this problem which solves it with O(n) time complexity. 
 
 package Arrays;
