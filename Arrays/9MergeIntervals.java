@@ -8,6 +8,7 @@
 
 package Arrays;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Stack;
@@ -50,5 +51,51 @@ class Solution {
         }
 
         return ans;
+    }
+
+    // Approach 2
+    public int[][] merge2(int[][] intervals) {
+        // Sorting
+
+        for (int i = 0; i < intervals.length; i++) {
+            for (int j = 0; j < intervals.length - i - 1; j++) {
+                if (intervals[j][0] > intervals[j + 1][0]) {
+                    int[] temp = intervals[j];
+                    intervals[j] = intervals[j + 1];
+                    intervals[j + 1] = temp;
+                }
+            }
+        }
+
+        int lowerBound = intervals[0][0];
+        int upperBound = intervals[0][1];
+
+        ArrayList<int[]> ans = new ArrayList<>();
+
+        for (int i = 0; i < intervals.length; i++) {
+            if (intervals[i][0] <= upperBound) {
+                upperBound = Math.max(intervals[i][1], upperBound);
+            } else {
+                int[] subArray = new int[2];
+                subArray[0] = lowerBound;
+                subArray[1] = upperBound;
+                ans.add(subArray);
+                lowerBound = intervals[i][0];
+                upperBound = intervals[i][1];
+
+            }
+        }
+        int[] subArray = new int[2];
+        subArray[0] = lowerBound;
+        subArray[1] = upperBound;
+        ans.add(subArray);
+
+        int[][] finalAns = new int[ans.size()][];
+
+        for (int i = 0; i < ans.size(); i++) {
+            finalAns[i] = ans.get(i);
+        }
+
+        return finalAns;
     }
 }
