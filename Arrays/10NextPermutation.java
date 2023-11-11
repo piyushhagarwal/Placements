@@ -23,6 +23,8 @@
 // Input: nums = [1,1,5]
 // Output: [1,5,1]
 
+// Link : https://leetcode.com/problems/next-permutation/
+
 package Arrays;
 
 class NextPermutation {
