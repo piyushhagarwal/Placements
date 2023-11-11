@@ -32,7 +32,10 @@ class NextPermutation {
         // 1. We find the first element that is smaller than the element to its right
         int n = nums.length;
         int i = n - 2;
-        while (i >= 0 && nums[i] >= nums[i + 1]) {
+        while (i >= 0) {
+            if (nums[i] < nums[i + 1]) {
+                break;
+            }
             i--;
         }
 
@@ -45,7 +48,10 @@ class NextPermutation {
         // greater than it
         if (i >= 0) {
             int j = n - 1;
-            while (j >= 0 && nums[i] >= nums[j]) {
+            while (j >= 0) {
+                if (nums[j] > nums[i]) {
+                    break;
+                }
                 j--;
             }
 
@@ -77,7 +83,9 @@ class NextPermutation {
         }
     }
     // In Cpp there is a function next_permutation()
-    // next_permutation(arr.begin(), arr.end());
+    // void nextPermutation(vector<int>& nums) {
+    // next_permutation(nums.begin(),nums.end());
+    // }
 
     public static void main(String args[]) {
         int arr1[] = { 1, 3, 5, 4, 2 };
