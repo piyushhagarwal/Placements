@@ -76,6 +76,8 @@ class NextPermutation {
             end--;
         }
     }
+    // In Cpp there is a function next_permutation()
+    // next_permutation(arr.begin(), arr.end());
 
     public static void main(String args[]) {
         int arr1[] = { 1, 3, 5, 4, 2 };
