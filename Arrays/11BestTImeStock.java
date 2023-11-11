@@ -18,26 +18,32 @@
 // Output: 0
 // Explanation: In this case, no transactions are done and the max profit = 0.
 
+// Link : https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+
 package Arrays;
 
 class BestTImeStock {
     public int maxProfit(int[] prices) {
 
-        int lsf = Integer.MAX_VALUE;
-        int op = 0;
-        int pist = 0;
+        int lowestBuyingPrice = Integer.MAX_VALUE; // lsf renamed to lowestBuyingPrice
+        int overallProfit = 0; // op renamed to overallProfit
+        int currentProfit = 0; // pist renamed to currentProfit
 
         for (int i = 0; i < prices.length; i++) {
-            if (prices[i] < lsf) {
-                lsf = prices[i];
+            // Check if the current price is lower than the lowest buying price
+            if (prices[i] < lowestBuyingPrice) {
+                lowestBuyingPrice = prices[i]; // Update the lowest buying price
             }
 
-            pist = prices[i] - lsf;
-            if (pist > op) {
-                op = pist;
+            // Calculate the current profit by subtracting the lowest buying price
+            currentProfit = prices[i] - lowestBuyingPrice;
+
+            // Check if the current profit is greater than the overall profit
+            if (currentProfit > overallProfit) {
+                overallProfit = currentProfit; // Update the overall profit
             }
         }
 
-        return op;
+        return overallProfit;
     }
 }
