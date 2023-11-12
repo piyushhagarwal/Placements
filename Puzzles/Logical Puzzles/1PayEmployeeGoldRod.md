@@ -1,8 +1,8 @@
-## An employee works for an employer for 7 days. The employer has a gold rod of 7 units. How does the employer pay to the employee, so that the number of employee’s rod units increases by one at the end of each day? The employer can make at most 2 cuts in the rod.
+### An employee works for an employer for 7 days. The employer has a gold rod of 7 units. How does the employer pay to the employee, so that the number of employee’s rod units increases by one at the end of each day? The employer can make at most 2 cuts in the rod.
 
 `Hint- after the end of the day employee’s can’t spend any part of rod`
 
-### Solution
+## Solution
 
 The employer can pay for seven days by making 2 cuts in a way that he has 3 rods of size 1, 2 and 4.
 
