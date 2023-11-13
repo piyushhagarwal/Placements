@@ -1,6 +1,10 @@
+// Link : https://leetcode.com/problems/transpose-matrix/
+
 package Arrays.Matrix;
 
 class Transpose {
+
+    // This is only valid for square matrix
     public static void withoutExtraSpace(int matrix[][]) {
         int n = matrix.length;
 
@@ -18,7 +22,7 @@ class Transpose {
         int m = matrix[0].length;
         int ans[][] = new int[m][n];
         for (int i = 0; i < n; i++) {
-            for (int j = i; j < m; j++) {
+            for (int j = 0; j < m; j++) { // Note here we iterate from 0
                 ans[j][i] = matrix[i][j];
             }
         }
