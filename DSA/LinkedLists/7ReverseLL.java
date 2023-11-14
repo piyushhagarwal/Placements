@@ -54,4 +54,16 @@ class ReverseLL {
 
         return Recursive(prevNode, currNode, nextNode);
     }
+
+    public ListNode RecursiveOptimized(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+
+        ListNode newHead = RecursiveOptimized(head.next);
+        head.next.next = head;
+        head.next = null;
+
+        return newHead;
+    }
 }
