@@ -41,15 +41,17 @@ class ReverseLL {
         return currNode;
     }
 
-    public ListNode Recursive(ListNode head) {
-        if (head == null || head.next == null) {
-            return head;
+    public ListNode Recursive(ListNode prevNode, ListNode currNode, ListNode nextNode) {
+        if (nextNode == null) {
+            currNode.next = prevNode;
+            return currNode;
         }
 
-        ListNode newHead = Recursive(head.next);
-        head.next.next = head;
-        head.next = null;
+        currNode.next = prevNode;
+        prevNode = currNode;
+        currNode = nextNode;
+        nextNode = nextNode.next;
 
-        return newHead;
+        return Recursive(prevNode, currNode, nextNode);
     }
 }
