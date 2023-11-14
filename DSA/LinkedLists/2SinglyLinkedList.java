@@ -43,6 +43,23 @@ class SSL {
         }
     }
 
+    public static void insertAtPosition(int data, int position) {
+        // If the LinkedList is Empty
+        if (head.data == -1) {
+            head.data = data;
+        } else {
+            Node newNode = new Node(data);
+            Node current = head;
+            int count = 1;
+            while (count < position - 1) {
+                current = current.next;
+                count++;
+            }
+            newNode.next = current.next;
+            current.next = newNode;
+        }
+    }
+
     public static void DeleteFromBeginning() {
         // If the LinkedList is Empty
         if (head.data == -1) {
@@ -66,6 +83,24 @@ class SSL {
                 current = current.next;
             }
             prev.next = null;
+        }
+    }
+
+    public static void DeleteFromPosition(int position) {
+        // If the LinkedList is Empty
+        if (head.data == -1) {
+            System.out.println("Linked List is empty");
+        } else {
+            Node prev = null;
+            Node current = head;
+            int count = 1;
+            while (count < position) {
+                prev = current;
+                current = current.next;
+                count++;
+            }
+            prev.next = current.next;
+            current.next = null;
         }
     }
 
