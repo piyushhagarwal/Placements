@@ -1,4 +1,4 @@
-package Multithreading;
+package Miscellaneous.Multithreading;
 
 class A extends Thread {
     public void run() {
