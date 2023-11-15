@@ -35,6 +35,7 @@ class ListNode {
 }
 
 class MiddleOfLL {
+    // Naive Approach
     public ListNode middleNode(ListNode head) {
         int length = 0;
         ListNode current = head;
@@ -54,4 +55,25 @@ class MiddleOfLL {
 
         return current;
     }
+
+    // This approach is done in
+    // 0(n) - time complexity
+    // 0(1) - space complexity
+
+    // Efficient Approach
+    public ListNode middleNodeEfficient(ListNode head) {
+        ListNode slow = head;
+        ListNode fast = head;
+
+        while (fast != null && fast.next != null) { // fast.next != null is used to handle even length LL
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        return slow;
+    }
+
+    // This approach is done in
+    // 0(n) - time complexity
+    // 0(1) - space complexity
 }
