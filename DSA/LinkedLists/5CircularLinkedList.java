@@ -1,5 +1,20 @@
 package LinkedLists;
 
+class Node {
+    int data;
+    Node next;
+
+    Node() {
+        this.data = -1;
+        this.next = null;
+    }
+
+    Node(int data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+
 class CircularLinkedList {
     public static Node head = new Node();
 
