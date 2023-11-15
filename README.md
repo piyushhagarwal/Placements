@@ -11,7 +11,9 @@ The repository is organized by topics, making it easy for you to navigate and fi
 
 - [DSA](https://github.com/piyushhagarwal/DSA_Placements/tree/main/DSA)
 - [Puzzles](https://github.com/piyushhagarwal/DSA_Placements/tree/main/Puzzles)
-- [Multithreading](https://github.com/piyushhagarwal/DSA_Placements/tree/main/Multithreading)
+- [Miscelloneous](https://github.com/piyushhagarwal/DSA_Placements/tree/main/Miscelloneous)
+    - [Multithreading](https://github.com/piyushhagarwal/Placements/tree/main/Miscellaneous/Multithreading)
+    - [Error Handling](https://github.com/piyushhagarwal/Placements/tree/main/Miscellaneous/ErrorHandling)
 - [Java Collections](https://github.com/piyushhagarwal/DSA_Placements/tree/main/Collection)
 
 
