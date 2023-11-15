@@ -1,6 +1,7 @@
 # DSA (Data Structure and Algorithms)
 
 This folder contains essential DSA questions covering a wide range of topics.
+- Each topic has its dedicated folder, containing solutions to various DSA and LeetCode problems.
 - Each file includes a link to the corresponding LeetCode question.
 - Solutions presented in various approaches (including brute force, improved, and optimized solutions).
 - Solution link to the youtube video.
