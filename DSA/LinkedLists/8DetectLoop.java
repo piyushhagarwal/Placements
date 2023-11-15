@@ -25,6 +25,7 @@
 package LinkedLists;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 //Definition for singly-linked list.
 class ListNode {
@@ -48,7 +49,7 @@ class DetectLoop {
     // Naive Approach
     public boolean hasCycleNaive(ListNode head) {
         ListNode curr = head;
-        ArrayList<ListNode> visited = new ArrayList();
+        ArrayList<ListNode> visited = new ArrayList<>();
         while (curr != null) {
             if (visited.contains(curr.next)) {
                 return true;
@@ -60,6 +61,21 @@ class DetectLoop {
     }
     // Time Complexity : O(n^2)
     // Space Complexity : O(n)
+
+    // If we use Hashing, we can reduce the time complexity to O(n) but the space
+    // complexity will still be O(n)
+    public boolean hasCycleMap(ListNode head) {
+        ListNode curr = head;
+        HashMap<ListNode, Integer> visited = new HashMap<>();
+        while (curr != null) {
+            if (visited.containsKey(curr.next)) {
+                return true;
+            }
+            visited.put(curr, 1);
+            curr = curr.next;
+        }
+        return false;
+    }
 
     // Optimized Approach : Floyd's Cycle Detection Algorithm
     public boolean hasCycle(ListNode head) {
