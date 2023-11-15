@@ -4,18 +4,15 @@ Welcome to the Interview Prep repository! 🚀 This repository is your go-to res
 
 ## Structure
 
-The repository is organized by topics, making it easy for you to navigate and find relevant questions based on the concepts you want to brush up on. Each topic has its dedicated folder, containing solutions to various DSA and LeetCode problems.
+The repository is organized by topics, making it easy for you to navigate and find relevant questions based on the concepts you want to brush up on. 
 
 
-## Flow to Study
+## Topics
 
-1. [Arrays](https://github.com/piyushhagarwal/DSA_Placements/tree/main/Arrays)
-2. [Searching and Sorting](https://github.com/piyushhagarwal/DSA_Placements/tree/main/SearchingSorting)
-3. [Binary Search](https://github.com/piyushhagarwal/DSA_Placements/tree/main/BinarySearch)
-4. [Strings](https://github.com/piyushhagarwal/DSA_Placements/tree/main/Strings)
-5. [Bit Manupulation](https://github.com/piyushhagarwal/DSA_Placements/tree/main/BitManupulation)
-6. [Recursion](https://github.com/piyushhagarwal/DSA_Placements/tree/main/Recursion)
-7. [Dynamic Programming](https://github.com/piyushhagarwal/DSA_Placements/tree/main/DynamicProgramming)
+- [DSA](https://github.com/piyushhagarwal/DSA_Placements/tree/main/DSA)
+- [Puzzles](https://github.com/piyushhagarwal/DSA_Placements/tree/main/Puzzles)
+- [Multithreading](https://github.com/piyushhagarwal/DSA_Placements/tree/main/Multithreading)
+- [Java Collections](https://github.com/piyushhagarwal/DSA_Placements/tree/main/Collection)
 
 
 
