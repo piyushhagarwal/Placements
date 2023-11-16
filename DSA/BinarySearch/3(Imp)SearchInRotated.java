@@ -18,6 +18,9 @@
 // Input: nums = [1], target = 0
 // Output: -1
 
+// Link : https://leetcode.com/problems/search-in-rotated-sorted-array/
+// Solution : https://www.youtube.com/watch?v=6z2HK4o8qcU&list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA&index=14
+
 package BinarySearch;
 
 //Step 1 : Find the pivot element
@@ -31,6 +34,7 @@ class Pivot {
         int end = n - 1;
         int mid = start + (end - start) / 2;
 
+        // If the array is not rotated at all
         if (arr[start] < arr[end]) {
             return 0;
         }
@@ -72,8 +76,6 @@ class Pivot {
             return binarySearch(arr, 0, pivot - 1, key);
         }
     }
-
-    // If not understood see Lecture 14 of code help
 
     public static void main(String args[]) {
         int arr[] = { 7, 8, 9, 10, 1, 2, 3 };
