@@ -21,6 +21,8 @@
 // Link : https://leetcode.com/problems/search-in-rotated-sorted-array/
 // Solution : https://www.youtube.com/watch?v=6z2HK4o8qcU&list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA&index=14
 
+// Similar Question(Find Minumum in Rotated Array) : https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/
+
 package BinarySearch;
 
 //Step 1 : Find the pivot element
