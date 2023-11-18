@@ -21,6 +21,10 @@
 // Input: arr = [0,10,5,2]
 // Output: 1
 
+// Link: https://leetcode.com/problems/find-peak-element/
+// Link 2  https://leetcode.com/problems/peak-index-in-a-mountain-array/
+// Solution: https://www.youtube.com/watch?v=zD2Jg3alZV8&list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA&index=13&t=4s
+
 package BinarySearch;
 
 class PeakIndex {
