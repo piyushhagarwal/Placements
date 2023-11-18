@@ -15,6 +15,7 @@
 // Output: 10
 
 // Link: https://leetcode.com/problems/single-element-in-a-sorted-array/
+// Solution : https://www.youtube.com/watch?v=AZOmHuHadxQ
 
 package BinarySearch;
 
@@ -47,7 +48,10 @@ class Solution {
                 return nums[mid];
             }
 
-            // Adjust search space based on the pattern of duplicates
+            // If the mid is even and the element at mid is equal to the element at mid + 1
+            // or if the mid is odd and the element at mid is equal to the element at mid -
+            // 1
+            // then the unique element is to the right of mid
             if ((mid % 2 == 0 && nums[mid] == nums[mid + 1]) || (mid % 2 == 1 && nums[mid] == nums[mid - 1])) {
                 start = mid + 1;
             } else {
