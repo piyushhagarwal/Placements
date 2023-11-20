@@ -90,6 +90,8 @@ class QuickSort {
     // space and O(1) time.
     // Therefore merge operation of merge sort can be implemented without extra
     // space for linked lists.
+    // If we want to retain the original order of elements even for equal elements,
+    // merge sort is preferred over quick sort.
     // As Merge sort is stable and in-place sorting algorithm, it is preferred over
     // QuickSort for sorting linked lists.
 
