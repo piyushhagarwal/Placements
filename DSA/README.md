@@ -15,5 +15,5 @@ This folder contains essential DSA questions covering a wide range of topics.
 4. [Strings](https://github.com/piyushhagarwal/DSA_Placements/tree/main/Strings)
 5. [Bit Manupulation](https://github.com/piyushhagarwal/DSA_Placements/tree/main/BitManupulation)
 6. [Recursion](https://github.com/piyushhagarwal/DSA_Placements/tree/main/Recursion)
-7. [Linked List](https://github.com/piyushhagarwal/DSA_Placements/tree/main/LinkedList)
+7. [Linked List](https://github.com/piyushhagarwal/DSA_Placements/tree/main/LinkedLists)
 8. [Dynamic Programming](https://github.com/piyushhagarwal/DSA_Placements/tree/main/DynamicProgramming)
