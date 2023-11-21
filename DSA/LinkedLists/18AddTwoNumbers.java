@@ -1,34 +1,21 @@
-// Given two decimal numbers represented by two linked lists of size N and M respectively. The task is to return a linked list that represents the sum of these two numbers.
+// You are given two non-empty linked lists representing two non-negative integers. The most significant digit comes first and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.
 
-// For example, the number 190 will be represented by the linked list, 1->9->0->null, similarly 25 by 2->5->null. Sum of these two numbers is 190 + 25 = 215, which will be represented by 2->1->5->null. You are required to return the head of the linked list 2->1->5->null.
+// You may assume the two numbers do not contain any leading zero, except the number 0 itself.
 
 // Example 1:
 
-// Input:
-// N = 2
-// valueN[] = {4,5}
-// M = 3
-// valueM[] = {3,4,5}
-// Output: 3 9 0  
-// Explanation: For the given two linked
-// list (4 5) and (3 4 5), after adding
-// the two linked list resultant linked
-// list will be (3 9 0).
+// Input: l1 = [7,2,4,3], l2 = [5,6,4]
+// Output: [7,8,0,7]
 // Example 2:
 
-// Input:
-// N = 2
-// valueN[] = {6,3}
-// M = 1
-// valueM[] = {7}
-// Output: 7 0
-// Explanation: For the given two linked
-// list (6 3) and (7), after adding the
-// two linked list resultant linked list
-// will be (7 0).
+// Input: l1 = [2,4,3], l2 = [5,6,4]
+// Output: [8,0,7]
+// Example 3:
 
-// Link : https://practice.geeksforgeeks.org/problems/add-two-numbers-represented-by-linked-lists/1
-// Leetcode Link : https://leetcode.com/problems/add-two-numbers/
+// Input: l1 = [0], l2 = [0]
+// Output: [0]
+
+// Link : https://leetcode.com/problems/add-two-numbers-ii
 // Solution Link : https://www.youtube.com/watch?v=HiRlTPf9aCg&list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA&index=56&t=1287s
 
 package LinkedLists;
