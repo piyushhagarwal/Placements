@@ -1,3 +1,12 @@
+// This program implements Doubly Linked List in Java
+// 1. Insertion at the beginning
+// 2. Insertion at the end
+// 3. Insertion at a given position
+// 4. Deletion at the beginning
+// 5. Deletion at the end
+// 6. Deletion at a given position
+// 7. Reverse a Doubly Linked List
+
 package LinkedLists;
 
 class Node {
@@ -98,6 +107,22 @@ class DoublyLinkedList {
                 current = current.next;
                 count++;
             }
+        }
+    }
+
+    public static void reversDLL() {
+        if (head.data == -1) {
+            System.out.println("LinkedList is Empty");
+        } else {
+            Node current = head;
+            Node temp = null;
+            while (current != null) {
+                temp = current.prev;
+                current.prev = current.next;
+                current.next = temp;
+                current = current.prev;
+            }
+            head = temp.prev;
         }
     }
 }
