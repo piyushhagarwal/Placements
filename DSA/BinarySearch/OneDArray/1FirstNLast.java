@@ -23,7 +23,7 @@
 // Link: https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-ArrayList
 // Solution : https://www.youtube.com/watch?v=zD2Jg3alZV8&list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA&index=13
 
-package BinarySearch;
+package BinarySearch.OneDArray;
 
 import java.util.ArrayList;
 

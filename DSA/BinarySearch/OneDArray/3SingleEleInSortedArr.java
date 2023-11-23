@@ -17,7 +17,7 @@
 // Link: https://leetcode.com/problems/single-element-in-a-sorted-array/
 // Solution : https://www.youtube.com/watch?v=AZOmHuHadxQ
 
-package BinarySearch;
+package BinarySearch.OneDArray;
 
 class Solution {
 
