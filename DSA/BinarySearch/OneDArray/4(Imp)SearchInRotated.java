@@ -23,7 +23,7 @@
 
 // Similar Question(Find Minumum in Rotated Array) : https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/
 
-package BinarySearch;
+package BinarySearch.OneDArray;
 
 //Step 1 : Find the pivot element
 //Step 2 : We check if the key is present between pivot and arr[n - 1]
