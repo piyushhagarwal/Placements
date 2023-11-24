@@ -3,11 +3,11 @@ package SearchingSorting;
 class QuickSort {
     public static int partition(int arr[], int start, int end) {
         // Step 1: Take a pivot
-        int pivot = start;
+        int pivot = end;
 
         // Step 2: Count all elements < pivot
         int count = 0;
-        for (int i = start + 1; i <= end; i++) {
+        for (int i = start; i < end; i++) {
             if (arr[i] < arr[pivot]) {
                 count++;
             }
@@ -16,8 +16,8 @@ class QuickSort {
         // Step 3: Update pivot
         pivot = start + count;
         int temp = arr[pivot];
-        arr[pivot] = arr[start];
-        arr[start] = temp;
+        arr[pivot] = arr[end];
+        arr[end] = temp;
 
         // Step 4: Place all smaller elements to the left of pivot and all larger
         // elements to its right
@@ -31,10 +31,10 @@ class QuickSort {
                 i++;
                 j--;
             } else {
-                if (arr[i] < arr[pivot]) {
+                if (arr[i] <= arr[pivot]) {
                     i++;
                 }
-                if (arr[j] > arr[pivot]) {
+                if (arr[j] >= arr[pivot]) {
                     j--;
                 }
             }
@@ -96,7 +96,7 @@ class QuickSort {
     // QuickSort for sorting linked lists.
 
     public static void main(String args[]) {
-        int arr[] = { 5, 4, 3, 6, 2, 1 };
+        int arr[] = { 5, 1, 1, 2, 0, 0 };
         quickSort(arr, 0, arr.length - 1);
         for (int i : arr) {
             System.out.print(i + " ");
