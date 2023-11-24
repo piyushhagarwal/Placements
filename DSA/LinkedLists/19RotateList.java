@@ -13,6 +13,20 @@
 
 package LinkedLists;
 
+class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode(int x) {
+        val = x;
+    }
+
+    ListNode(int x, ListNode next) {
+        val = x;
+        this.next = next;
+    }
+}
+
 class RotateList {
     // This method rotates a linked list to the right by k positions.
 
