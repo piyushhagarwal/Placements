@@ -18,9 +18,52 @@
 
 // Similar question: Given two arrays arr1 and arr2 of size N and M respectively and an element K. The task is to find the element that would be at the kth position of the final sorted array.
 
-package BinarySearch;
+package BinarySearch.OneDArray;
 
 class Solution {
+    // Brute force approach
+    public double findMedianSortedArrays1(int[] nums1, int[] nums2) {
+        int n1 = nums1.length;
+        int n2 = nums2.length;
+
+        int[] arr = new int[n1 + n2];
+        int i = 0;
+        int j = 0;
+        int k = 0;
+
+        while (i < n1 && j < n2) {
+            if (nums1[i] <= nums2[j]) {
+                arr[k] = nums1[i];
+                i++;
+                k++;
+            } else {
+                arr[k] = nums2[j];
+                j++;
+                k++;
+            }
+        }
+
+        while (i < n1) {
+            arr[k] = nums1[i];
+            i++;
+            k++;
+        }
+
+        while (j < n2) {
+            arr[k] = nums2[j];
+            j++;
+            k++;
+        }
+
+        int mid = (n1 + n2) / 2;
+        if ((n1 + n2) % 2 == 0) {
+            return ((double) (arr[mid] + arr[mid - 1]) / 2);
+        } else {
+            return arr[mid];
+        }
+    }
+
+    // Efficient approach
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int n1 = nums1.length;
         int n2 = nums2.length;
