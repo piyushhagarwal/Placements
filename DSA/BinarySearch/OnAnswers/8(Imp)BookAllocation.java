@@ -1,7 +1,8 @@
 //Given that there are N books and M students. 
 //Also given are the number of pages in each book in ascending order. 
 //Book allocation is in contiguous manner
-//The task is to assign books in such a way that the maximum number of pages assigned to a student is minimum, with the condition that every student is assigned to read some consecutive books. 
+//The task is to assign books in such a way that the maximum number of pages assigned to a student is minimum,
+//with the condition that every student is assigned to read some consecutive books. 
 //Print that minimum number of pages.
 
 // Input: N = 4, pages[] = {12, 34, 67, 90}, M = 2
@@ -16,9 +17,15 @@
 // Of the 3 cases, Option 3 has the minimum pages = 113.
 
 //Hard level question
-//Same solution for Painters partition and subset of arrays
 
-package BinarySearch;
+//Same solution for:
+//1) Painters Partition : https://www.codingninjas.com/studio/problems/painter-s-partition-problem_1089557/
+//2) Split Array Largest Sum : https://leetcode.com/problems/split-array-largest-sum/
+
+// Book Allocation Link: https://www.codingninjas.com/studio/problems/allocate-books_1090540
+// Solution: https://youtu.be/Z0hwjftStI4?si=N4GkzBcPuJZQ0EdE
+
+package BinarySearch.OnAnswers;
 
 class BookAllocation {
 
