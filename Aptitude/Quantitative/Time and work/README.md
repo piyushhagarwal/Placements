@@ -1,6 +1,6 @@
 # List of Problems Solved
+For detailed solution click on the question
 
-<br></br>
 
 1. [If Roger can do a piece of work in 8 days and Antony can do the same work in 5 days, in how many days will both of them do it together?](https://github.com/piyushhagarwal/Placements/blob/main/Aptitude/Quantitative/Time%20and%20work/1.md)
 
