@@ -16,7 +16,7 @@ For detailed solution click on the question
 
 7. [An exam was conducted and the following was analyzed. 4 men were able to check some exam papers in 8 days working 5 hours regularly. What is the total number of hours taken by 2 men in 20 days to check double the number of exam papers?](https://github.com/piyushhagarwal/Placements/blob/main/Aptitude/Quantitative/Time%20and%20work/7.md)
 
-### Ansers
+### Answers
 
 1. 40/13 days
 2. 20 days
