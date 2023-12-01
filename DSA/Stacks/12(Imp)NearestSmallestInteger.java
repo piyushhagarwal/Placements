@@ -114,5 +114,9 @@ class nearestSmallestInteger {
         // Return the final result list
         return ans;
     }
-
 }
+
+// Similar Problems:
+// Nearest Smallest Element to the right
+// Nearest Greater Element to the left
+// Nearest Greater Element to the right
