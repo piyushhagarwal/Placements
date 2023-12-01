@@ -117,6 +117,9 @@ class nearestSmallestInteger {
 }
 
 // Similar Problems:
-// Nearest Smallest Element to the right
+
+// Nearest Smallest Element to the right(Give it a try)
+// Start the loop from the end
+
 // Nearest Greater Element to the left
 // Nearest Greater Element to the right
