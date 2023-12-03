@@ -33,7 +33,9 @@
 
 package Stacks;
 
-public class 14CelebrityProblem {
+import java.util.Stack;
+
+class CelebrityProblem {
     // Approach 1: Brute Force
     // Function to find the celebrity in a group
     static int findCelebrity(int M[][], int n) {
@@ -67,7 +69,8 @@ public class 14CelebrityProblem {
                 // If both conditions are true, update celebrityIndex to i
                 if (condition2) {
                     celebrityIndex = i;
-                    // Note: There should be only one potential celebrity, so no need to continue checking
+                    // Note: There should be only one potential celebrity, so no need to continue
+                    // checking
                     break;
                 }
             }
@@ -123,13 +126,12 @@ public class 14CelebrityProblem {
     }
     // Time Complexity: O(n)
 
-
     // Example usage
     public static void main(String[] args) {
         int[][] matrix = {
-            {0, 1, 0},
-            {0, 0, 0},
-            {1, 1, 0}
+                { 0, 1, 0 },
+                { 0, 0, 0 },
+                { 1, 1, 0 }
         };
         int n = matrix.length;
         int result = findCelebrity(matrix, n);
