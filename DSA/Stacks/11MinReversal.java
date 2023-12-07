@@ -2,6 +2,8 @@
 // Solution: https://www.youtube.com/watch?v=BmZnJehDzyU&list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA&index=60
 package Stacks;
 
+import java.util.Stack;
+
 class MinReversal {
     public static int findMinimumCost(String str) {
         // Step 1: Remove redundant brackets using a stack
