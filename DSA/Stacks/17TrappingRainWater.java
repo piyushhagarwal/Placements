@@ -1,3 +1,6 @@
+// Link : https://leetcode.com/problems/trapping-rain-water/
+// Solution : https://www.youtube.com/watch?v=m18Hntz4go8
+
 package Stacks;
 
 class Solution {
