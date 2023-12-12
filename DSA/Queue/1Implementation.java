@@ -1,7 +1,5 @@
 package Queue;
 
-import java.util.ArrayList;
-
 // Queue using Array
 class QueueArray<T> {
     private int front;
@@ -42,6 +40,26 @@ class QueueArray<T> {
 
     public boolean isEmpty() {
         return front == rear;
+    }
+
+    public T peek() {
+        if (!isEmpty()) {
+            return (T) queue[front];
+        } else {
+            System.out.println("Queue underflow! Cannot peek element.");
+            return null;
+        }
+    }
+
+    public static void main(String[] args) {
+        QueueArray<Integer> queue = new QueueArray<>(5);
+        queue.push(1);
+        queue.push(2);
+        queue.push(3);
+        System.out.println(queue.pop());
+        System.out.println(queue.pop());
+        System.out.println(queue.pop());
+        System.out.println(queue.pop());
     }
 }
 
@@ -103,5 +121,16 @@ class QueueLinkedList<T> {
 
     public boolean isEmpty() {
         return front == null;
+    }
+
+    public static void main(String[] args) {
+        QueueLinkedList<Integer> queue = new QueueLinkedList<>();
+        queue.push(1);
+        queue.push(2);
+        queue.push(3);
+        System.out.println(queue.pop());
+        System.out.println(queue.pop());
+        System.out.println(queue.pop());
+        System.out.println(queue.pop());
     }
 }
