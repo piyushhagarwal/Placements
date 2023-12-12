@@ -93,7 +93,7 @@ class StockSpanner1 {
 
         // Step 6: Create an ArrayList to store the current price and its corresponding
         // span
-        ArrayList<Integer> temp = new ArrayList();
+        ArrayList<Integer> temp = new ArrayList<>();
         temp.add(price);
         temp.add(span);
 
