@@ -1,6 +1,7 @@
 # DSA (Data Structure and Algorithms)
 
 This folder contains essential DSA questions covering a wide range of topics.
+
 - Each topic has its dedicated folder, containing solutions to various DSA and LeetCode problems.
 - Each file includes a link to the corresponding LeetCode question.
 - Solutions presented in various approaches (including brute force, improved, and optimized solutions).
@@ -16,4 +17,6 @@ This folder contains essential DSA questions covering a wide range of topics.
 5. [Bit Manupulation](https://github.com/piyushhagarwal/DSA_Placements/tree/main/BitManupulation)
 6. [Recursion](https://github.com/piyushhagarwal/DSA_Placements/tree/main/Recursion)
 7. [Linked List](https://github.com/piyushhagarwal/DSA_Placements/tree/main/LinkedLists)
-8. [Dynamic Programming](https://github.com/piyushhagarwal/DSA_Placements/tree/main/DynamicProgramming)
+8. [Stacks](https://github.com/piyushhagarwal/DSA_Placements/tree/main/Stacks)
+9. [Queue](https://github.com/piyushhagarwal/DSA_Placements/tree/main/Queue)
+10. [Dynamic Programming](https://github.com/piyushhagarwal/DSA_Placements/tree/main/DynamicProgramming)
