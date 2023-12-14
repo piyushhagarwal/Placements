@@ -1,5 +1,8 @@
 package BinaryTrees;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 class Node {
     int data;
     Node left;
@@ -32,6 +35,35 @@ class Creation {
         return newNode;
     }
 
+    // Creation by Level Order Traversal
+    public static Node binaryTreeCreationLevelOrder(int[] arr) {
+
+        Node root = new Node(arr[0]);
+
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(root);
+
+        int i = 1;
+
+        while (!queue.isEmpty() && i < arr.length) {
+            Node poppedElement = queue.poll();
+
+            if (arr[i] != -1) {
+                poppedElement.left = new Node(arr[i]);
+                queue.add(poppedElement.left);
+            }
+            i++;
+
+            if (arr[i] != -1) {
+                poppedElement.right = new Node(arr[i]);
+                queue.add(poppedElement.right);
+            }
+            i++;
+        }
+
+        return root;
+    }
+
     public static void main(String[] args) {
 
         int[] arr = { 1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1 };
@@ -44,5 +76,15 @@ class Creation {
         System.out.println(root.left.left.data);
         System.out.println(root.left.right.data);
         System.out.println(root.right.right.data);
+
+        Node root2 = binaryTreeCreationLevelOrder(arr);
+
+        System.out.println(root2.data);
+        System.out.println(root2.left.data);
+        System.out.println(root2.right.data);
+        System.out.println(root2.left.left.data);
+        System.out.println(root2.left.right.data);
+        System.out.println(root2.right.right.data);
+
     }
 }
