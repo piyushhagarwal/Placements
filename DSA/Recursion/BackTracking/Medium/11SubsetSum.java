@@ -57,4 +57,7 @@ class Solution {
         // Return the final list of subset sums
         return result;
     }
+
+    // Time Complexity: O(2^n)
+    // Space Complexity: O(n)
 }
