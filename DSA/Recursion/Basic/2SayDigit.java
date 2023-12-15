@@ -1,3 +1,6 @@
+// Given a number, say the digits of the number
+// 412 -> four one two
+
 package Recursion.Basic;
 
 class SayDigit {
