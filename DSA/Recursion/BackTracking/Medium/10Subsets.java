@@ -49,4 +49,7 @@ class Solution {
         helper(nums, 0, subset, result);
         return result;
     }
+
+    // Time Complexity: O(2^n)
+    // Space Complexity: O(n)
 }
