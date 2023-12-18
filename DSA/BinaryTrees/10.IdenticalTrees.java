@@ -20,6 +20,16 @@
 
 package BinaryTrees;
 
+// Sample TreeNode class definition
+class TreeNode {
+    int val;
+    TreeNode left, right;
+
+    TreeNode(int val) {
+        this.val = val;
+    }
+}
+
 class Solution {
     // Method to check if two binary trees are the same
     public boolean isSameTree(TreeNode p, TreeNode q) {
