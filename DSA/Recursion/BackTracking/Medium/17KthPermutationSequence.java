@@ -29,14 +29,18 @@
 package Recursion.BackTracking.Medium;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 class Solution {
+
+    // Brute force method
 
     // Method to get the kth permutation of numbers from 1 to n
     public String getPermutation(int n, int k) {
         // Calculate factorial of (n-1) and initialize a list with numbers from 1 to n
         int factorial = 1;
+
         List<Integer> arr = new ArrayList<>();
         for (int i = 1; i < n; i++) {
             factorial = factorial * i;
@@ -44,6 +48,7 @@ class Solution {
         }
 
         arr.add(n); // Add the last number to the list
+
         StringBuffer ans = new StringBuffer(); // To store the result
         k = k - 1; // Adjust k to work with zero-based indexing
 
@@ -62,5 +67,58 @@ class Solution {
         }
 
         return ans.toString(); // Convert the result to a string and return
+    }
+
+    // Bruteforce approach
+
+    // Helper method to generate all permutations of a string
+    public void helper(StringBuffer str, int index, List<String> result) {
+        // Base case: If index is beyond the length of the string, add the permutation
+        // to the result
+        if (index >= str.length()) {
+            result.add((new StringBuffer(str)).toString());
+            return;
+        }
+
+        // Iterate over the remaining characters in the string
+        for (int i = index; i < str.length(); i++) {
+            // Swap the characters at indices i and index
+            swap(i, index, str);
+
+            // Recursively generate permutations for the remaining characters
+            helper(str, index + 1, result);
+
+            // Undo the swap to backtrack and explore other possibilities
+            swap(i, index, str);
+        }
+    }
+
+    // Method to swap characters at indices i and j in a string
+    public void swap(int i, int j, StringBuffer str) {
+        char temp = str.charAt(i);
+        str.setCharAt(i, str.charAt(j));
+        str.setCharAt(j, temp);
+    }
+
+    // Main method to get the k-th permutation of numbers from 1 to n
+    public String getPermutation1(int n, int k) {
+        // Create a string with numbers from 1 to n
+        StringBuffer str = new StringBuffer();
+        for (int i = 1; i <= n; i++) {
+            str.append(i);
+        }
+
+        // List to store all permutations
+        List<String> result = new ArrayList<>();
+
+        // Start generating permutations from index 0
+        int index = 0;
+        helper(str, index, result);
+
+        // Sort the permutations
+        Collections.sort(result);
+
+        // Return the k-th permutation (1-indexed)
+        return result.get(k - 1);
     }
 }
