@@ -64,6 +64,16 @@ import java.util.Map;
 import java.util.Queue;
 import java.util.TreeMap;
 
+class Node {
+    int data;
+    Node left, right;
+
+    Node(int item) {
+        data = item;
+        left = right = null;
+    }
+}
+
 class Solution {
 
     // Nested class to represent an element containing a node and its level
