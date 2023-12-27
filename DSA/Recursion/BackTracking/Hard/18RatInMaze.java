@@ -45,11 +45,6 @@ class Solution {
             return;
         }
 
-        // Base Case: Out of bounds
-        if (x >= n || y >= n) {
-            return;
-        }
-
         // Explore Downward
         if (((x + 1) < n) && (isVisited[x + 1][y] == 0) && (m[x + 1][y] == 1)) {
             isVisited[x + 1][y] = 1;
