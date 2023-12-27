@@ -15,6 +15,7 @@
 // Output: [["Q"]]
 
 // Link: https://leetcode.com/problems/n-queens/
+// Also Solve : https://www.codingninjas.com/studio/problems/the-n-queens-puzzle_981286
 // Solution Link: https://www.youtube.com/watch?v=9wEwqNdOAVQ&list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA&index=91
 
 package Recursion.BackTracking.Hard;
