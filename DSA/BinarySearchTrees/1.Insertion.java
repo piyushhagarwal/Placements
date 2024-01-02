@@ -17,6 +17,9 @@
 // Input: root = [4,2,7,1,3,null,null,null,null,null,null], val = 5
 // Output: [4,2,7,1,3,5]
 
+// Link: https://leetcode.com/problems/insert-into-a-binary-search-tree/
+// Solution : https://www.youtube.com/watch?v=UeRUKRJvPa4&list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA&index=75
+
 package BinarySearchTrees;
 
 // Definition for a binary tree node.
