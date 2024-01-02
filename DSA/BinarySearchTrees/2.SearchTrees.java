@@ -34,6 +34,26 @@ class Solution {
         }
 
     }
+
+    // Iterative Solution
+    public TreeNode searchBSTIterative(TreeNode root, int val) {
+        if (root == null) {
+            return null;
+        }
+
+        TreeNode curr = root;
+        while (curr != null) {
+            if (val == curr.val) {
+                return curr;
+            } else if (val > curr.val) {
+                curr = curr.right;
+            } else {
+                curr = curr.left;
+            }
+        }
+
+        return null;
+    }
 }
 
 // Time Complexity: O(log N) for balanced BST

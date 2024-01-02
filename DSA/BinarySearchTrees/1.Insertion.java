@@ -57,6 +57,37 @@ class Solution {
 
         return root;
     }
+
+    // Iterative Solution
+    public TreeNode insertIntoBSTIterative(TreeNode root, int val) {
+        if (root == null) {
+            TreeNode newNode = new TreeNode(val);
+            return newNode;
+        }
+
+        TreeNode curr = root;
+        while (true) {
+            if (val > curr.val) {
+                if (curr.right == null) {
+                    TreeNode newNode = new TreeNode(val);
+                    curr.right = newNode;
+                    break;
+                } else {
+                    curr = curr.right;
+                }
+            } else {
+                if (curr.left == null) {
+                    TreeNode newNode = new TreeNode(val);
+                    curr.left = newNode;
+                    break;
+                } else {
+                    curr = curr.left;
+                }
+            }
+        }
+
+        return root;
+    }
 }
 
 // Time Complexity: O(log N) for balanced BST
