@@ -5,6 +5,15 @@ package BinaryTrees;
 import java.util.Stack;
 
 // Node -> Left -> Right
+class Node {
+    int data;
+    Node left;
+    Node right;
+
+    Node(int data) {
+        this.data = data;
+    }
+}
 
 class PreOrederTraversal {
 
