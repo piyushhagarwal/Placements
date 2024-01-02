@@ -19,4 +19,6 @@ This folder contains essential DSA questions covering a wide range of topics.
 7. [Linked List](https://github.com/piyushhagarwal/DSA_Placements/tree/main/DSA/LinkedLists)
 8. [Stacks](https://github.com/piyushhagarwal/DSA_Placements/tree/main/DSA/Stacks)
 9. [Queue](https://github.com/piyushhagarwal/DSA_Placements/tree/main/DSA/Queue)
-10. [Dynamic Programming](https://github.com/piyushhagarwal/DSA_Placements/tree/main/DSA/DynamicProgramming)
+10. [Binary Trees](https://github.com/piyushhagarwal/DSA_Placements/tree/main/DSA/BinaryTrees)
+11. [Binary Search Trees](https://github.com/piyushhagarwal/DSA_Placements/tree/main/DSA/BinarySearchTrees)
+12. [Dynamic Programming](https://github.com/piyushhagarwal/DSA_Placements/tree/main/DSA/DynamicProgramming)
