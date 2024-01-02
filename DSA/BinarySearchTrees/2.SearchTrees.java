@@ -36,4 +36,5 @@ class Solution {
     }
 }
 
-// Time Complexity: O(log N)
+// Time Complexity: O(log N) for balanced BST
+// Time Complexity: O(N) for skewed BST
