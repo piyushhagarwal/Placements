@@ -1,6 +1,25 @@
 package BinarySearchTrees;
 
 class MinMax {
+    class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode() {
+        }
+
+        TreeNode(int val) {
+            this.val = val;
+        }
+
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
+    }
+
     // To find the minimum element in a BST, we need to traverse the left subtree
     // until we reach the leftmost leaf.
     public int findMin(TreeNode root) {
