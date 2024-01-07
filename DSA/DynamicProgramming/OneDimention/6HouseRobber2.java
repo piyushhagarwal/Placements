@@ -25,44 +25,48 @@
 package DynamicProgramming.OneDimention;
 
 class Solution {
-
-    public int solve3(int[] nums) {
-        int n = nums.length;
-        int last = nums[n - 1];
-        int secondLast = Math.max(nums[n - 1], nums[n - 2]);
-        int current = 0;
-        for (int i = n - 3; i >= 0; i--) {
-            int include = last + nums[i];
-            int exclude = secondLast;
-            current = Math.max(include, exclude);
-            last = secondLast;
-            secondLast = current;
+    public int solve(int[] nums, int index, int[] dp) {
+        if (index >= nums.length) {
+            return 0;
         }
 
-        return secondLast;
+        if (dp[index] != -1) {
+            return dp[index];
+        }
+
+        // Include
+        int include = solve(nums, index + 2, dp) + nums[index];
+
+        // Exclude
+        int exclude = solve(nums, index + 1, dp);
+
+        dp[index] = Math.max(include, exclude);
+        return dp[index];
     }
 
     public int rob(int[] nums) {
-        int nums1[] = new int[nums.length - 1]; // Excluding the first house
-        int nums2[] = new int[nums.length - 1]; // Excluding the last house
-        // Copying the array
-        for (int i = 0; i < nums.length; i++) {
-            if (i != 0) {
-                // Copying the array except the first element
-                nums1[i - 1] = nums[i];
-            }
-
-            if (i != nums.length - 1) {
-                // Copying the array except the last element
-                nums2[i] = nums[i];
-            }
-        }
         if (nums.length == 1) {
             return nums[0];
-        } else if (nums.length == 2) {
-            return Math.max(nums[0], nums[1]);
-        } else {
-            return Math.max(solve3(nums1), solve3(nums2)); // Returning the maximum of the two
         }
+        int[] nums1 = new int[nums.length - 1]; // Exclude the last house
+        int[] nums2 = new int[nums.length - 1]; // Exclude the first house
+
+        for (int i = 0; i < nums.length - 1; i++) {
+            nums1[i] = nums[i];
+            nums2[i] = nums[i + 1];
+        }
+
+        int[] dp1 = new int[nums1.length];
+        int[] dp2 = new int[nums2.length];
+
+        for (int i = 0; i < dp1.length; i++) {
+            dp1[i] = -1;
+            dp2[i] = -1;
+        }
+
+        int nums1Ans = solve(nums1, 0, dp1);
+        int nums2Ans = solve(nums2, 0, dp2);
+
+        return Math.max(nums1Ans, nums2Ans);
     }
 }
