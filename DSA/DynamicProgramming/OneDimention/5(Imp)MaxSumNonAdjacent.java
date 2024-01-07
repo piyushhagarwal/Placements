@@ -27,11 +27,8 @@ class Solution {
         if (index >= nums.length) {
             return 0;
         }
-        if (index == (nums.length - 1)) {
-            return nums[nums.length - 1];
-        }
 
-        // Includex
+        // Include
         int include = solve(nums, index + 2) + nums[index];
 
         // Exclude
@@ -44,9 +41,6 @@ class Solution {
     public int solve1(int[] nums, int index, int[] dp) {
         if (index >= nums.length) {
             return 0;
-        }
-        if (index == (nums.length - 1)) {
-            return nums[nums.length - 1];
         }
 
         if (dp[index] != -1) {
@@ -63,7 +57,7 @@ class Solution {
         return dp[index];
     }
 
-    // Dynamic Programming solution with memoization
+    // Dynamic Programming solution with tabulation
     public int solve2(int[] nums) {
         int n = nums.length;
         int[] dp = new int[n];
