@@ -19,7 +19,7 @@
 // Output: 1
 
 // Link : https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/description/
-// Solution : https://www.youtube.com/watch?v=QG0hE0R_ng4&list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA&index=71&t=30s
+// Solution : https://www.youtube.com/watch?v=QG0hE0R_ng4&list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA&index=71&t=640s
 
 package BinaryTrees;
 
