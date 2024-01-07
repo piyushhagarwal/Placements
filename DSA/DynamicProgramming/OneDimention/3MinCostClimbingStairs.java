@@ -34,29 +34,33 @@ class Solution {
     // Solve by normal recursion
     int solve(int[] cost, int n) {
         if (n == 0) {
-            return cost[0];
+            return 0; // As it could be the starting point so no cost is required to come to this
+                      // point
         }
         if (n == 1) {
-            return cost[1];
+            return 0; // As it could be the starting point so no cost is required to come to this
+                      // point
         }
-        int ans = Math.min(solve(cost, n - 1), solve(cost, n - 2)) + cost[n];
+        int ans = Math.min(solve(cost, n - 1) + cost[n - 1], solve(cost, n - 2) + cost[n - 2]);
         return ans;
     }
 
     // Solve by memoization
-    int solve2(int[] cost, int n, int[] dp) {
+    int solve2(int[] dp, int[] cost, int n) {
         if (n == 0) {
-            return cost[0];
+            dp[0] = 0;
+            return dp[0];
         }
         if (n == 1) {
-            return cost[1];
+            dp[1] = 0;
+            return dp[1];
         }
 
         if (dp[n] != -1) {
             return dp[n];
         }
 
-        dp[n] = Math.min(solve2(cost, n - 1, dp), solve2(cost, n - 2, dp)) + cost[n];
+        dp[n] = Math.min(solve2(dp, cost, n - 1) + cost[n - 1], solve2(dp, cost, n - 2) + cost[n - 2]);
         return dp[n];
 
     }
