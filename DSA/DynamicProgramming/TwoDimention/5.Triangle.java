@@ -26,22 +26,22 @@ import java.util.List;
 
 // By recursive approach
 class Solution {
-    public int solve(int level, int last, List<List<Integer>> triangle) {
-        if (level == triangle.size() - 1) {
-            return triangle.get(level).get(last);
+    public int solve(int row, int col, List<List<Integer>> triangle) {
+        if (row == triangle.size() - 1) {
+            return triangle.get(row).get(col);
         }
 
-        int sameIndex = solve(level + 1, last, triangle);
-        int nextIndex = solve(level + 1, last + 1, triangle);
+        int sameIndex = solve(row + 1, col, triangle);
+        int nextIndex = solve(row + 1, col + 1, triangle);
 
-        int ans = Math.min(sameIndex, nextIndex) + triangle.get(level).get(last);
+        int ans = Math.min(sameIndex, nextIndex) + triangle.get(row).get(col);
         return ans;
     }
 
     public int minimumTotal(List<List<Integer>> triangle) {
-        int level = 0;
-        int last = 0;
-        return solve(level, last, triangle);
+        int row = 0;
+        int col = 0;
+        return solve(row, col, triangle);
     }
 }
 
@@ -49,37 +49,37 @@ class Solution {
 
 class Solution2 {
     // Helper method to recursively calculate the minimum path sum
-    public int solve(int level, int last, List<List<Integer>> triangle, List<List<Integer>> dp) {
-        // Base case: If at the last level of the triangle, return the value at that
+    public int solve(int row, int col, List<List<Integer>> triangle, List<List<Integer>> dp) {
+        // Base case: If at the col row of the triangle, return the value at that
         // position
-        if (level == triangle.size() - 1) {
-            return triangle.get(level).get(last);
+        if (row == triangle.size() - 1) {
+            return triangle.get(row).get(col);
         }
 
         // If the result for the current position is already calculated, return it
-        if (dp.get(level).get(last) != -1) {
-            return dp.get(level).get(last);
+        if (dp.get(row).get(col) != -1) {
+            return dp.get(row).get(col);
         }
 
         // Recursive cases:
 
         // Calculate the minimum path sum by considering the current position and moving
-        // to the next level
-        int sameIndex = solve(level + 1, last, triangle, dp);
-        int nextIndex = solve(level + 1, last + 1, triangle, dp);
+        // to the next row
+        int sameIndex = solve(row + 1, col, triangle, dp);
+        int nextIndex = solve(row + 1, col + 1, triangle, dp);
 
         // Update the DP array with the minimum path sum for the current position
-        dp.get(level).set(last, Math.min(sameIndex, nextIndex) + triangle.get(level).get(last));
+        dp.get(row).set(col, Math.min(sameIndex, nextIndex) + triangle.get(row).get(col));
 
         // Return the calculated minimum path sum for the current position
-        return dp.get(level).get(last);
+        return dp.get(row).get(col);
     }
 
     // Main method to find the minimum path sum for the given triangle
     public int minimumTotal(List<List<Integer>> triangle) {
-        // Initialize level and last position
-        int level = 0;
-        int last = 0;
+        // Initialize row and col position
+        int row = 0;
+        int col = 0;
 
         // Initialize a 2D array for dynamic programming memoization
         List<List<Integer>> dp = new ArrayList<>();
@@ -92,6 +92,6 @@ class Solution2 {
         }
 
         // Call the recursive solve method to find the minimum path sum
-        return solve(level, last, triangle, dp);
+        return solve(row, col, triangle, dp);
     }
 }
