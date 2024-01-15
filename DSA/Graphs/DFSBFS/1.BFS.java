@@ -31,7 +31,7 @@
 // Link : https://practice.geeksforgeeks.org/problems/bfs-traversal-of-graph/1#
 // Solution : https://www.youtube.com/watch?v=b5kij1Akf9I&list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA&index=94
 
-package Graphs;
+package Graphs.DFSBFS;
 
 import java.util.ArrayList;
 import java.util.HashMap;

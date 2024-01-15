@@ -36,7 +36,7 @@
 // Link : https://practice.geeksforgeeks.org/problems/depth-first-traversal-for-a-graph/1#
 // Solution : https://www.youtube.com/watch?v=aJa3U-hydXc
 
-package Graphs;
+package Graphs.DFSBFS;
 
 import java.util.ArrayList;
 import java.util.HashMap;
