@@ -67,8 +67,8 @@ class Solution {
         return ans;
     }
 }
-// Time Complexity: O(n!)
-// Space Complexity: O(n)
+// Time Complexity: O(2^n)
+// Space COmplexity: O(n)
 
 class Solution2 {
     // Recursive function with memoization to find the minimum number of coins
