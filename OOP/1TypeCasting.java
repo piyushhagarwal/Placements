@@ -8,6 +8,7 @@ class Solution {
         // any explicit action from the programmer.
         int intValue = 10;
         double doubleValue = intValue; // Implicit casting from int to double
+        System.out.println(doubleValue); // 10.0
 
         // In the example above, the int value is implicitly cast to a double without
         // any explicit conversion.
@@ -17,6 +18,7 @@ class Solution {
         // manually converted to a data type with a smaller size(Eg. int).
         double doubleValue2 = 10.99;
         int intValue2 = (int) doubleValue2; // Explicit casting from double to int
+        System.out.println(intValue2); // 10
         // In the example above, the double value is explicitly cast to an int by
         // placing the int keyword in front of the double value.
 
