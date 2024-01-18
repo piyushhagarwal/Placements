@@ -25,25 +25,15 @@ package Arrays;
 class BestTImeStock {
     public int maxProfit(int[] prices) {
 
-        int lowestBuyingPrice = Integer.MAX_VALUE; // lsf renamed to lowestBuyingPrice
-        int overallProfit = 0; // op renamed to overallProfit
-        int currentProfit = 0; // pist renamed to currentProfit
+        int maxProfit = 0;
+        int minCost = prices[0];
 
-        for (int i = 0; i < prices.length; i++) {
-            // Check if the current price is lower than the lowest buying price
-            if (prices[i] < lowestBuyingPrice) {
-                lowestBuyingPrice = prices[i]; // Update the lowest buying price
-            }
-
-            // Calculate the current profit by subtracting the lowest buying price
-            currentProfit = prices[i] - lowestBuyingPrice;
-
-            // Check if the current profit is greater than the overall profit
-            if (currentProfit > overallProfit) {
-                overallProfit = currentProfit; // Update the overall profit
-            }
+        for (int i = 1; i < prices.length; i++) {
+            int currentProfit = prices[i] - minCost;
+            maxProfit = Math.max(currentProfit, maxProfit);
+            minCost = Math.min(prices[i], minCost);
         }
 
-        return overallProfit;
+        return maxProfit;
     }
 }
