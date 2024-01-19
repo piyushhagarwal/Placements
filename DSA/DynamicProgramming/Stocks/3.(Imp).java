@@ -25,6 +25,8 @@
 // Link : https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/
 // Solution : https://www.youtube.com/watch?v=-uQGzhYj8BQ
 
+// Similar Question : https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/ (Imp)
+
 package DynamicProgramming.Stocks;
 
 // By using the same logic as the previous problem, we can solve this problem as well.
@@ -105,10 +107,10 @@ class Solution2 {
         int canBuy = 1;
         int index = 0;
         int capacity = 2;
-        int[][][] dp = new int[prices.length][2][3];
+        int[][][] dp = new int[prices.length][2][capacity + 1];
         for (int i = 0; i < prices.length; i++) {
             for (int j = 0; j < 2; j++) {
-                for (int k = 0; k < 3; k++) {
+                for (int k = 0; k <= capacity; k++) {
                     dp[i][j][k] = -1;
                 }
             }
