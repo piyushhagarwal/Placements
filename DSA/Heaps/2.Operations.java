@@ -35,7 +35,7 @@ class Heaps {
     }
     // Time Complexity: O(logn)
 
-    // Algorithm to delete an element from the heap:
+    // Algorithm to delete an element from the heap: (We will delete the root)
     // 1. Replace the root of the heap with the last element on the last level.
     // 2. Compare the new root with its children; if they are in the correct order,
     // stop.
@@ -48,20 +48,27 @@ class Heaps {
         arr[1] = arr[size]; // Copy last element to first
         size--; // Reduce size
         int index = 1;
-        int left = 2 * index;
-        int right = 2 * index + 1;
-        while (left <= size && right <= size) {
-            if (arr[index] > arr[left] && arr[index] > arr[right]) {
-                break;
-            } else if (arr[left] > arr[right]) {
+        while (index < size) {
+            int left = 2 * index;
+            int right = 2 * index + 1;
+            if (left <= size && right <= size) { // If both children exist
+                // Swap with the larger child
+                if (arr[left] > arr[right]) {
+                    swap(arr, index, left);
+                    index = left;
+                } else {
+                    swap(arr, index, right);
+                    index = right;
+                }
+            } else if (left <= size && arr[left] > arr[index]) { // If only left child exists
                 swap(arr, index, left);
                 index = left;
-            } else {
+            } else if (right <= size && arr[right] > arr[index]) { // If only right child exists
                 swap(arr, index, right);
                 index = right;
+            } else { // If no child exists
+                break;
             }
-            left = 2 * index;
-            right = 2 * index + 1;
         }
     }
     // Time Complexity: O(logn)
@@ -80,6 +87,7 @@ class Heaps {
         h.insert(30);
         h.insert(60);
         h.insert(50);
+        h.insert(5);
         h.print();
         h.delete();
         System.out.println();
