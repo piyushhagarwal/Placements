@@ -23,6 +23,13 @@ class PriorityQ {
         // 5. Size
         int size = pq.size();
         System.out.println("Size of Queue: " + size);
+
+        // 6. Check if empty
+        boolean isEmpty = pq.isEmpty();
+        System.out.println("Is Queue Empty: " + isEmpty);
+
+        // Initialize a priority queue which stores elements in descending order
+        PriorityQueue<Integer> pqDescending = new PriorityQueue<>((a, b) -> b - a);
     }
 
 }
