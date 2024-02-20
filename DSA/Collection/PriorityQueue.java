@@ -7,7 +7,7 @@ class PriorityQ {
         // 1. Initialization
         PriorityQueue<Integer> pq = new PriorityQueue<>();
 
-        // 2. Insertion
+        // 2. Insertion Time Complexity: O(log n)
         pq.add(50);
         pq.add(20);
         pq.add(30);
@@ -16,7 +16,7 @@ class PriorityQ {
         int head = pq.peek(); // Returns 20
         System.out.println("Head of Queue: " + head);
 
-        // 4. Deletion
+        // 4. Deletion Time Complexity: O(log n)
         int removedElement = pq.poll(); // Removes and returns the head of the queue (20)
         System.out.println("Removed Element: " + removedElement);
 
