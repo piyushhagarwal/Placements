@@ -45,8 +45,8 @@ class Rectangle implements Shape {
     class InterfaceExample {
         public static void main(String[] args) {
             // Creating instances of Circle and Rectangle
-            Circle circle = new Circle(5.0);
-            Rectangle rectangle = new Rectangle(4.0, 6.0);
+            Shape circle = new Circle(5.0);
+            Shape rectangle = new Rectangle(4.0, 6.0);
 
             // Calculating and displaying the areas
             System.out.println("Area of Circle: " + circle.calculateArea());
