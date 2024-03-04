@@ -1,7 +1,9 @@
 package BinaryTrees;
 
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.PriorityQueue;
+import java.util.Queue;
 
 class HuffmanCoding {
     static class Node {
@@ -51,15 +53,20 @@ class HuffmanCoding {
         return root;
     }
 
-    public static void inorder(Node root) {
-        if (root == null) {
+    public static HashMap<Character, String> generateHuffmanCode(HashMap<Character, Integer> freq) {
+        Node root = generateHuffmanTree(freq);
+        HashMap<Character, String> prefixCodeTable = new HashMap<>();
+        generatePrefixCodeTable(root, "", prefixCodeTable);
+        return prefixCodeTable;
+    }
+
+    public static void generatePrefixCodeTable(Node root, String s, HashMap<Character, String> prefixCodeTable) {
+        if (root.left == null && root.right == null) {
+            prefixCodeTable.put(root.ch, s);
             return;
         }
-        if (root.ch != '\0') {
-            System.out.println(root.ch);
-        }
-        inorder(root.left);
-        inorder(root.right);
+        generatePrefixCodeTable(root.left, s + "0", prefixCodeTable);
+        generatePrefixCodeTable(root.right, s + "1", prefixCodeTable);
     }
 
     public static void main(String[] args) {
@@ -74,9 +81,65 @@ class HuffmanCoding {
         freq.put('u', 37);
         freq.put('z', 2);
 
-        Node root = generateHuffmanTree(freq);
-        inorder(root);
+        // HashMap<Character, String> prefixCodeTable = generateHuffmanCode(freq);
 
+        // for (char ch : prefixCodeTable.keySet()) {
+        // System.out.println(ch + " " + prefixCodeTable.get(ch));
+        // }
+
+        Node root = generateHuffmanTree(freq);
+        String serialized = serialize(root);
+        System.out.println(serialized);
+        Node deserialized = deserialize(serialized);
+        inorder(deserialized);
+    }
+
+    public static void inorder(Node root) {
+        if (root == null) {
+            return;
+        }
+        System.out.print(root.ch + " ");
+        inorder(root.left);
+        inorder(root.right);
+    }
+
+    public static String serialize(Node root) {
+        Queue<Node> q = new LinkedList<>();
+        StringBuilder sb = new StringBuilder();
+        q.add(root);
+        while (!q.isEmpty()) {
+            Node curr = q.poll();
+            if (curr != null) {
+                sb.append(curr.ch + " ");
+                q.add(curr.left);
+                q.add(curr.right);
+            } else {
+                sb.append("NONE ");
+            }
+        }
+        return sb.toString();
+    }
+
+    public static Node deserialize(String data) {
+        String[] nodes = data.split(" ");
+        Node root = new Node(nodes[0].charAt(0), 0);
+        Queue<Node> q = new LinkedList<>();
+        q.add(root);
+        int i = 1;
+        while (i < nodes.length && !q.isEmpty()) {
+            Node curr = q.poll();
+            if (i + 1 < nodes.length && !nodes[i].equals("NONE")) {
+                curr.left = new Node(nodes[i].charAt(0), 0);
+                q.add(curr.left);
+            }
+            i++;
+            if (i + 2 < nodes.length && !nodes[i].equals("NONE")) {
+                curr.right = new Node(nodes[i].charAt(0), 0);
+                q.add(curr.right);
+            }
+            i++;
+        }
+        return root;
     }
 
 }
