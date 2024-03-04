@@ -25,3 +25,4 @@ This folder contains essential DSA questions covering a wide range of topics.
 13. [Heaps](https://github.com/piyushhagarwal/DSA_Placements/tree/main/DSA/Heaps)
 14. [Graphs](https://github.com/piyushhagarwal/DSA_Placements/tree/main/DSA/Graphs)
 15. [Dynamic Programming](https://github.com/piyushhagarwal/DSA_Placements/tree/main/DSA/DynamicProgramming)
+16. [Greedy](https://github.com/piyushhagarwal/DSA_Placements/tree/main/DSA/GreedyAlgos)
