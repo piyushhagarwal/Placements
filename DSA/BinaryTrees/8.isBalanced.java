@@ -88,7 +88,7 @@ class Solution {
                 return pair;
             }
 
-            // Recursively check if the left and right subtrees are balanced
+            // Recursively call the method on the left and right subtrees
             Pair left = isBalancedOptimized(root.left);
             Pair right = isBalancedOptimized(root.right);
 
