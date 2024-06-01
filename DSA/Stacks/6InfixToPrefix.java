@@ -101,7 +101,7 @@ class InfixToPrefix {
 
     public static void main(String[] args) {
         String expression = "A+B*(C^D-E)";
-        System.out.println(infixToPrefix(expression));
+        System.out.println(infixToPrefix(expression)); // Output: +A-*B^CDE
 
     }
 }
