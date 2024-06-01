@@ -2,6 +2,11 @@ package Stacks;
 
 import java.util.Stack;
 
+// Infix to Postfix Conversion
+// Given an infix expression, convert it to postfix expression.
+// Infix expression: The expression of the form a op b. When an operator is in-between every pair of operands. For example, a + b, 5 * 6, etc.
+// Postfix expression: The expression of the form a b op. When an operator is followed for every pair of operands. For example, ab +, 56 *, etc.
+
 // Initialize an empty string (ans) and a stack (stack).
 // Iterate through each character in the infix expression:
 //      1. If the character is '(', push it onto the stack.
