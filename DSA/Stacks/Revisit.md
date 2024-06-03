@@ -1,1 +1,4 @@
 - 6. InfixToPrefix
+- 11. MinReversal
+- 13. LongestRectangleHistogram
+- 14. CelebrityProblem
