@@ -19,6 +19,7 @@
 package BinaryTrees;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -74,12 +75,7 @@ class Solution {
                 // Dequeue the node from the front of the queue
                 TreeNode poppedNode = queue.poll();
 
-                // Add the value of the node to the ans list based on the traversal direction
-                if (leftToRight) {
-                    ans.add(poppedNode.val);
-                } else {
-                    ans.add(0, poppedNode.val); // Add to the beginning for right to left traversal
-                }
+                ans.add(poppedNode.val);
 
                 // Enqueue the left and right children if they exist
                 if (poppedNode.left != null) {
@@ -89,6 +85,9 @@ class Solution {
                     queue.add(poppedNode.right);
                 }
             }
+
+            // If the leftToRight is false
+            Collections.reverse(ans);
 
             // Add the ans list to the result list
             result.add(new ArrayList<>(ans));
