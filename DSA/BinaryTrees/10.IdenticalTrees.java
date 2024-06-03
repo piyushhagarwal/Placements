@@ -39,7 +39,10 @@ class Solution {
         }
 
         // If one of the nodes is null and the other is not, they are not the same
-        if (p == null || q == null) {
+        if (p == null && q != null) {
+            return false;
+        }
+        if (p != null && q == null) {
             return false;
         }
 
