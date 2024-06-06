@@ -113,4 +113,33 @@ class GasStation {
         return -1;
     }
 
+    // More efficient approach
+    public int canCompleteCircuit2(int[] gas, int[] cost) {
+
+        // If the total sum of gas is less than the total sum of cost, return -1
+        int sum = 0;
+        for (int i = 0; i < gas.length; i++) {
+            sum += gas[i] - cost[i];
+        }
+
+        if (sum < 0)
+            return -1;
+
+        // If the total sum of gas is greater than or equal to the total sum of cost, a
+        // valid circuit exists at the starting point
+        int start = 0;
+        int total = 0;
+
+        // Iterate through each gas station to find the starting point
+        for (int i = 0; i < gas.length; i++) {
+            total += gas[i] - cost[i];
+            if (total < 0) {
+                total = 0;
+                start = i + 1;
+            }
+        }
+
+        return start;
+    }
+
 }
