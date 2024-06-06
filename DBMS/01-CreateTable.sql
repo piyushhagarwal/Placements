@@ -1,29 +1,35 @@
-CREATE DATABASE EmployeeDB;
+CREATE DATABASE ORG;
 SHOW DATABASES;
-USE EmployeeDB;
+USE ORG;
 
-CREATE TABLE Employee (
-    EmployeeID INT NOT NULL PRIMARY KEY,
-    EmployeeName VARCHAR(50),
-    EmployeeSalary INT,
-    EmployeeDOB DATE
+CREATE TABLE Worker (
+	WORKER_ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	FIRST_NAME CHAR(25),
+	LAST_NAME CHAR(25),
+	SALARY INT(15),
+	JOINING_DATE DATETIME,
+	DEPARTMENT CHAR(25)
 );
 
-CREATE TABLE BONUS (
-    BonusID INT NOT NULL PRIMARY KEY,
-    BonusAmount INT,
-    EmployeeID INT,
-    FOREIGN KEY (EmployeeID) 
-        REFERENCES Employee(EmployeeID)     
-        ON DELETE CASCADE -- This will delete the record from BONUS table if the record from Employee table is deleted
+
+CREATE TABLE Bonus (
+	WORKER_REF_ID INT,
+	BONUS_AMOUNT INT(10),
+	BONUS_DATE DATETIME,
+	FOREIGN KEY (WORKER_REF_ID)
+		REFERENCES Worker(WORKER_ID)
+        ON DELETE CASCADE
 );
 
-INSERT INTO Employee (EmployeeID, EmployeeName, EmployeeSalary, EmployeeDOB) VALUES 
-    (1, 'John Doe', 50000, '1990-01-01'),
-    (2, 'Jane Doe', 60000, '1991-01-01'),
-    (3, 'John Smith', 70000, '1992-01-01');
 
-INSERT INTO BONUS (BonusID, BonusAmount, EmployeeID) VALUES 
-    (1, 5000, 1),
-    (2, 6000, 2),
-    (3, 7000, 3);
+        
+CREATE TABLE Title (
+	WORKER_REF_ID INT,
+	WORKER_TITLE CHAR(25),
+	AFFECTED_FROM DATETIME,
+	FOREIGN KEY (WORKER_REF_ID)
+		REFERENCES Worker(WORKER_ID)
+        ON DELETE CASCADE
+);
+
+
