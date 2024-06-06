@@ -61,40 +61,6 @@ class Solution {
 
         int ans = 0;
 
-        // 1. Check for O on the boudaries
-
-        // 1st row
-        for (int j = 0; j < n; j++) {
-            if (grid[0][j] == '1' && visited[0][j] == 0) {
-                ans++;
-                dfs(0, j, grid, visited);
-            }
-        }
-
-        // 1st col
-        for (int i = 0; i < m; i++) {
-            if (grid[i][0] == '1' && visited[i][0] == 0) {
-                ans++;
-                dfs(i, 0, grid, visited);
-            }
-        }
-
-        // Last row
-        for (int j = 0; j < n; j++) {
-            if (grid[m - 1][j] == '1' && visited[m - 1][j] == 0) {
-                ans++;
-                dfs(m - 1, j, grid, visited);
-            }
-        }
-
-        // Last col
-        for (int i = 0; i < m; i++) {
-            if (grid[i][n - 1] == '1' && visited[i][n - 1] == 0) {
-                ans++;
-                dfs(i, n - 1, grid, visited);
-            }
-        }
-
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 if (grid[i][j] == '1' && visited[i][j] == 0) {
