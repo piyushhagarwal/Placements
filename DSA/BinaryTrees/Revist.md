@@ -1,3 +1,6 @@
 - 8. isBalanced
 - 11. (Imp)SumTree
 - 12. ZigZagTraversal
+- 14. TopView
+- 16. RightView
+- 18. VerticalOrderTraversal
