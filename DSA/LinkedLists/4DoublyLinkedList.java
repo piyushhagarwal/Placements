@@ -103,10 +103,12 @@ class DoublyLinkedList {
         } else {
             Node current = head;
             int count = 1;
-            while (count < position - 1) {
+            while (count < position) {
                 current = current.next;
                 count++;
             }
+            current.prev.next = current.next;
+            current.next.prev = current.prev;
         }
     }
 
