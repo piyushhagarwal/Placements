@@ -28,7 +28,7 @@ package GreedyAlgos;
 
 import java.util.Arrays;
 
-public class MinimumPlatforms {
+class MinimumPlatforms {
     public static int findPlatform(int arr[], int dep[], int n) {
         // add your code here
         Arrays.sort(arr);
