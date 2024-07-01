@@ -14,7 +14,6 @@
 package GreedyAlgos;
 
 import java.util.Arrays;
-import java.util.Comparator;
 
 class pair {
     int first, second;
@@ -38,12 +37,7 @@ class Solution {
 
         // comparator function used in sorting the list of pairs
         // according to increasing order of the finish time.
-        Arrays.sort(x, new Comparator<pair>() {
-            @Override
-            public int compare(pair s1, pair s2) {
-                return s1.second - s2.second;
-            }
-        });
+        Arrays.sort(x, (a, b) -> a.second - b.second);
 
         int last = -1;
         int res = 0;
