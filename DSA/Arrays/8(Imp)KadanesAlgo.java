@@ -28,14 +28,22 @@ package Arrays;
 class KadanesAlgo {
 
     static int kadanesAlgo(int arr[]) {
-        int maxSoFar = Integer.MIN_VALUE;
-        int maxEndingHere = 0;
+        int maxSoFar = Integer.MIN_VALUE; // Integer.MIN_VALUE is used to handle the case when all the elements are
+                                          // negative
+        int maxEndingHere = 0; // This variable is used to keep track of the sum of the subarray ending at the
+                               // current index
 
         for (int i = 0; i < arr.length; i++) {
+
+            // Step 1: Add the current element to maxEndingHere variable
             maxEndingHere += arr[i];
+
+            // Step 2: Check if the maxSoFar is less than maxEndingHere, if yes then update
             if (maxSoFar < maxEndingHere) {
                 maxSoFar = maxEndingHere;
             }
+
+            // Step 3: If maxEndingHere is less than 0, then update it to 0
             if (maxEndingHere < 0) {
                 maxEndingHere = 0;
             }
