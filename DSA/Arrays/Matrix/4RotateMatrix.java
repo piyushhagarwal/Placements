@@ -8,6 +8,8 @@
 package Arrays.Matrix;
 
 class RotateMatrix {
+    // Brute force approach is to create a new matrix and fill it with the rotated
+    // values of the original matrix
     public static void BruteForce(int[][] matrix) {
         int n = matrix.length;
         int[][] ans = new int[n][n];
