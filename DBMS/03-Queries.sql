@@ -72,7 +72,10 @@ select department, count(worker_id) AS no_of_worker from worker group by departm
 ORDER BY no_of_worker desc;
 
 -- Q-24. Write an SQL query to print details of the Workers who are also Managers.
-select w.* from worker as w inner join title as t on w.worker_id = t.worker_ref_id where t.worker_title = 'Manager';
+select w.* from worker as w 
+inner join title as t 
+on w.worker_id = t.worker_ref_id 
+where t.worker_title = 'Manager';
 
 -- Q-25. Write an SQL query to fetch number (more than 1) of same titles in the ORG of different types.
 select worker_title, count(*) as count from title group by worker_title having count > 1;
