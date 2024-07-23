@@ -28,6 +28,10 @@ class PreOrederTraversal {
         preOrderTraversal(root.right);
     }
 
+    // Time Complexity: O(n) where n is the number of nodes in the binary tree
+    // Space Complexity: O(n) where n is the number of nodes in the binary tree
+    // (Recursive Stack)
+
     // Iterative
     public static void preOrderTraversalIterative(Node root) {
 
