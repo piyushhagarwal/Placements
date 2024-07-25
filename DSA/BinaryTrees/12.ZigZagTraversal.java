@@ -87,7 +87,9 @@ class Solution {
             }
 
             // If the leftToRight is false
-            Collections.reverse(ans);
+            if (!leftToRight)
+                // Reverse the ans list
+                Collections.reverse(ans);
 
             // Add the ans list to the result list
             result.add(new ArrayList<>(ans));
