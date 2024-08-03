@@ -2,80 +2,117 @@
 // The new class can reuse the properties and methods of the existing class and can also extend or override them to provide specific functionality.
 // Inheritance promotes code reuse, extensibility, and the creation of a hierarchical relationship between classes.
 
-// Base class (superclass)
-class Calculator {
-    // Method to add two numbers
-    public int add(int a, int b) {
-        return a + b;
+// We'll use an e-commerce application where we manage different types of products.
+
+// Base class
+class Product {
+    private String name;
+    private double price;
+    private String description;
+
+    // Constructor
+    public Product(String name, double price, String description) {
+        this.name = name;
+        this.price = price;
+        this.description = description;
     }
 
-    // Method to subtract two numbers
-    public int subtract(int a, int b) {
-        return a - b;
+    // Getter methods
+    public String getName() {
+        return name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    // Method to display product details
+    public void displayProductDetails() {
+        System.out.println("Product Name: " + name);
+        System.out.println("Price: $" + price);
+        System.out.println("Description: " + description);
     }
 }
 
-// Derived class (subclass)
-class AdvancedCalculator extends Calculator {
-    // Method to multiply two numbers
-    public int multiply(int a, int b) {
-        return a * b;
+// Derived class for Electronics products
+class Electronics extends Product {
+    private int warrantyPeriod; // Warranty period in months
+    private String brand;
+
+    // Constructor
+    public Electronics(String name, double price, String description, int warrantyPeriod, String brand) {
+        super(name, price, description); // Call the constructor of the base class
+        this.warrantyPeriod = warrantyPeriod;
+        this.brand = brand;
     }
 
-    // Method to divide two numbers
-    public double divide(double a, double b) {
-        if (b != 0) {
-            return a / b;
-        } else {
-            System.out.println("Cannot divide by zero.");
-            return Double.NaN; // NaN (Not a Number) to represent an undefined result
-        }
+    // Getter methods
+    public int getWarrantyPeriod() {
+        return warrantyPeriod;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    // Overridden method to display product details
+    @Override
+    public void displayProductDetails() {
+        super.displayProductDetails(); // Call the base class method
+        System.out.println("Warranty Period: " + warrantyPeriod + " months");
+        System.out.println("Brand: " + brand);
     }
 }
 
-class CalculatorExample {
+// Derived class for Clothing products
+class Clothing extends Product {
+    private String size;
+    private String material;
+
+    // Constructor
+    public Clothing(String name, double price, String description, String size, String material) {
+        super(name, price, description); // Call the constructor of the base class
+        this.size = size;
+        this.material = material;
+    }
+
+    // Getter methods
+    public String getSize() {
+        return size;
+    }
+
+    public String getMaterial() {
+        return material;
+    }
+
+    // Overridden method to display product details
+    @Override
+    public void displayProductDetails() {
+        super.displayProductDetails(); // Call the base class method
+        System.out.println("Size: " + size);
+        System.out.println("Material: " + material);
+    }
+}
+
+// Main class to demonstrate inheritance
+class Main {
     public static void main(String[] args) {
-        // Create an instance of the AdvancedCalculator class
-        AdvancedCalculator myCalculator = new AdvancedCalculator();
+        // Creating an Electronics product
+        Electronics laptop = new Electronics("Laptop", 1200.99, "High-performance laptop", 24, "Dell");
 
-        // Use methods from the Calculator class
-        int sum = myCalculator.add(5, 3);
-        int difference = myCalculator.subtract(8, 4);
+        // Creating a Clothing product
+        Clothing tshirt = new Clothing("T-Shirt", 19.99, "Comfortable cotton t-shirt", "M", "Cotton");
 
-        System.out.println("Sum: " + sum);
-        System.out.println("Difference: " + difference);
-
-        // Use methods from the AdvancedCalculator class
-        int product = myCalculator.multiply(4, 3);
-        double quotient = myCalculator.divide(10.0, 2.0);
-
-        System.out.println("Product: " + product);
-        System.out.println("Quotient: " + quotient);
+        // Display product details
+        laptop.displayProductDetails();
+        System.out.println();
+        tshirt.displayProductDetails();
     }
 }
-
-// Multilevel Inheritance
-class ScientificCalculator extends AdvancedCalculator {
-    // Method to find the square root of a number
-    public double squareRoot(double a) {
-        if (a >= 0) {
-            return Math.sqrt(a);
-        } else {
-            System.out.println("Cannot calculate square root of a negative number.");
-            return Double.NaN;
-        }
-    }
-
-    // Method to raise a number to a power
-    public double power(double base, double exponent) {
-        return Math.pow(base, exponent);
-    }
-}
-
-// ScientificCalculator inherits from AdvancedCalculator, which in turn inherits
-// from Calculator.
-// This class will have access to all the methods( add, subtract, multiply,
-// divide, squareRoot, power) from all the three classes.
 
 // Multiple Inheritance
 // Java does not support multiple inheritance of classes.
