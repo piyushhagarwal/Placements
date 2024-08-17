@@ -1,6 +1,6 @@
 # JAVA for interview
 
-## [Java Most Asked Interview Questions](https://www.interviewbit.com/java-interview-questions/)
+## [Java Most Asked Interview Questions Link](https://www.interviewbit.com/java-interview-questions/)
 
 If you want to learn Java from scratch, then you can refer to the following resources:
 
