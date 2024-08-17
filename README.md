@@ -7,10 +7,10 @@ Welcome to the Interview Prep repository! 🚀 This repository is your go-to res
 1. [DSA](https://github.com/piyushhagarwal/Placements/tree/main/DSA)
 2. Core Subjects
 
-   - [Operating Systems]()
-   - [DBMS]()
-   - [Computer Networks]()
-   - [OOP]()
+   - [Operating Systems](https://github.com/piyushhagarwal/Placements/tree/main/Operating%20Systems)
+   - [DBMS](https://github.com/piyushhagarwal/Placements/tree/main/DBMS)
+   - [Computer Networks](https://github.com/piyushhagarwal/Placements/tree/main/Computer%20Networks)
+   - [OOP](https://github.com/piyushhagarwal/Placements/tree/main/DBMS)
 
 3. [Java](https://github.com/piyushhagarwal/Placements/tree/main/Java)
 
